@@ -3,7 +3,6 @@ const cors = require("cors");
 const helmet = require("helmet");
 // const session = require('express-session');
 // const MongoStore = require('connect-mongo')(session);
-const authRoute = require("../routes/auth");
 const profileRoute = require("../routes/profile");
 const eventsRoute = require("../routes/events");
 // const { db } = require('../db');
@@ -32,7 +31,6 @@ server.use(express.json());
 //   })
 // );
 
-server.use("/api/auth", authRoute);
 server.use("/api/profile", profileRoute);
 server.use("/api/events", eventsRoute);
 
